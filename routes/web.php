@@ -16,13 +16,14 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-// GET - Get customer information
-$router->get('/api/v0/customer/{id}', 'ExampleController@getCustomer');
+
 // POST - Insert customer information
 $router->post('/api/v0/customer', 'ExampleController@insertCustomer');
-// PUT - Update the Customer information
-$router->put('/api/v0/customer', 'ExampleController@updateCustomer');
-// DELETE - Delete the Customer information
-$router->delete('/api/v0/customer/{id}', 'ExampleController@deleteCustomer');
 // POST - Bulk customer upload
 $router->post('/api/v0/allcustomer', 'ExampleController@bulkCustomerUpload');
+// PUT - Update the Customer information
+$router->put('/api/v0/customer', 'ExampleController@updateCustomer');
+// GET - Get customer information
+$router->get('/api/v0/customer', 'ExampleController@getCustomer');
+// DELETE - Delete the Customer information
+$router->delete('/api/v0/customer', 'ExampleController@deleteCustomer');
